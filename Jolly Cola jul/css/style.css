@@ -1,0 +1,443 @@
+/**
+ * fil: css/style.css
+ **/
+
+/* Reset: Meyer Style */
+/* fjerner default browser styles */
+@import 'reset.css';
+
+/* Farve- og fontvariabler */
+:root {
+  /* farver */
+
+  --white: rgb(255, 255, 255);
+  --baggrundsfarve: rgb(10, 17, 72);
+  --header: rgb(43, 36, 139);
+  --white: rgb(255, 255, 255);
+  --navbar: rgb(43, 36, 139);
+  --navhover: rgb(88, 82, 168);
+
+  /* fonte */
+  --overskrift: 'avenir';
+  --broedtekst: 'niveau-grotesk';
+
+  /* whitespace */
+  --whitespace: .5rem;
+}
+
+header{
+  font-family: var(--overskrift);
+  text-align: center;
+  margin-top: var(--whitespace);
+  margin-bottom: var(--whitespace);
+  margin: 0;
+}
+
+/* Her bruges en variabel: --blue */
+body {
+  font-family: var(--broedtekst);
+  background-color: var(--baggrundsfarve);
+  margin: 0;
+
+}
+
+.desktopforsidebilleder {
+  display: flex;
+}
+
+#konkurrence {
+  width: 100%;
+  margin-left: 0%;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+
+#popup{
+  transition: transform .2s;
+
+}
+#popup1:hover, #popup2:hover, #popup3:hover, #popup4:hover{
+-ms-transform: scale(1.1); /* IE 9 */
+ -webkit-transform: scale(1.1); /* Safari 3-8 */
+ transform: scale(1.1);
+
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 40px;
+  background-color: var(--baggrundsfarve)
+}
+
+.greasebilledeforside{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  background-color: var(--baggrundsfarve);
+  margin:0;
+  text-align: center;
+
+}
+.loc1{
+
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 94%;
+  background-color: var(--baggrundsfarve);
+  margin: 0;
+  text-align: center;
+  max-width: 100%;
+
+}
+
+.billetlink{
+  font-size: 2em;
+
+  text-align: center;
+}
+
+
+/* Typografisk */
+
+p {
+  margin-left: var(--whitespace);
+  margin-right: var(--whitespace);
+  padding-bottom: var(--whitespace);
+  font-size: 2em;
+  max-width: 100ch;
+  padding-left: 45px;
+}
+h2 {
+  font-family: times;
+  text-align: left;
+  font-size: 2em;
+  padding-left: 10%;
+  padding-top: 30px;
+  color: white;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+
+}
+
+/* Wrap */
+#wrap {
+  min-height: 100vh;
+}
+
+
+
+/* Dropdown burgermenuen */
+
+
+
+.dropdown{
+    margin:0%;
+    display: inline-block;
+    font-size: 16px;
+    color: rgb(43, 36, 139);
+}
+
+.dropbtn {
+  background-color: rgb(43, 36, 139);
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: WHITE;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(10,17,72);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgba(10,17,72);
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.burgeroverskrifter {
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {background-color: rgb(10,17,72)}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(10,17,72);
+}
+
+.third-level-menu {
+  display: inline-block;
+  font-size: 13px;
+  padding: 0;
+  z-index: 1;
+  block-size: auto;
+}
+
+#burger {
+  font-size: 40px;
+  text-decoration: none;
+  margin:0%;
+}
+
+.logodesktop {
+  text-align: center;
+  width: 12em;
+  position: absolute;
+display: flex;
+margin-left: 43%;
+  margin-top: 0%;
+}
+
+.logomobil {
+  text-align: center;
+  width: 8em;
+  position: absolute;
+display: flex;
+margin-left: 33%;
+  margin-top: 0%;
+}
+
+/* Navigationsbar med submenu */
+.dtmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* font-size: 20pt; */
+  color: rgb(43, 36, 139);
+  overflow: hidden;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+
+.dtmenu a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 28px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: arial black;
+  margin: 0;
+}
+
+.dtmenu a:hover, .subnav:hover .subnavbtn {
+  background-color: var(--navhover);
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: var(--navhover);
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+
+/* Navigation and footer */
+nav {
+  background-color: var(--header);
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+nav a {
+  color: var(--white);
+}
+
+nav li {
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: center;
+  display: inline
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 130px;
+  color: var(--white);
+  background-color: var(--header);
+  display: flex;
+}
+
+
+
+footer div:nth-child(2) {
+
+  display: flex;
+}
+
+.kontakt{
+font-size: 2ch;
+font-family: niveau-grotesk, sans-serif;
+font-weight: 300;
+font-style: normal;
+padding-left: 1ch;
+padding-top: 1ch;
+}
+
+.facebook{
+width: 2.2ch;
+height: 2.2ch;
+padding-top: 0.5ch;
+padding-left: 0ch;
+
+}
+
+.insta{
+  width: 2.2ch;
+  height: 2.2ch;
+  padding-top: 0.5ch;
+  padding-left: 0ch;
+}
+
+
+/* Sections (højde == skærmhøjde) */
+section {
+  background-color: var(--white);
+}
+
+/* Billeder */
+img {
+  margin: 0%;
+max-width: 100%;
+  display: flex;
+
+
+
+}
+
+a {
+    text-decoration: none;
+  }
+
+
+
+
+
+/* Her begynder de forskellige devices */
+
+/* 1. Mobile enheder */
+@media only screen and (max-width: 600px) {
+  /* A. Giv baggrunden en farve */
+   section {font-size: 2em;}
+  .dtmenu{display: none;}
+  #deskbilleder {display: none;}
+  p {display: none;}
+  h2 {display: none;}
+  .loc {display: none;}
+  .billetlink {display: none;}
+  #konkurrence {display: none;}
+  .logodesktop {display: none;}
+}
+
+
+/* 2. Tablets */
+
+@media only screen and (min-width: 600px) {
+  /* Vælg en anden baggrundsfarve til tablets */
+  .example {background: green;}
+  /* Flexbox: design efter skitser */
+  .dtmenu{display: none;}
+
+
+}
+
+/* 3. Stor skærm (slut her) */
+@media only screen and (min-width: 768px) {
+  /* 3.A.: Giv baggrunden en ny farve, sørg for en god kontrat til tekst. */
+.example {background: black;}
+  /* 3.B.: Skjul burgeren */
+.dropdown { display: none;}
+
+.deskbilleder { display: none; }
+
+.logo {width: 12em
+
+}
+.logomobil {display: none;}
+
+
+
+.forsidebilleder{display: none;}
+
+  .dtmenu{display: flex;}
+
+
+}
+
+@media only screen and (min-width: 992px) {
+  /* 3.A.: Giv baggrunden en ny farve, sørg for en god kontrat til tekst. */
+section {font-size: 0.2em;}
+
+#overskrift {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.forsidebilleder{display: none;}
+}
+
+
+@media only screen and (min-width: 1200px){
+  section {font-size: 0.2em;}
+
+#køb {
+  padding-left: 45px;
+  padding-bottom: 100px;
+  font-size: 2em;
+}
+
+nav {display: block;}
